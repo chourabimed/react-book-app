@@ -54,7 +54,7 @@ const Dashboard = () => {
           <div className="col text-center search_bar">
             <input
               type="text"
-              placeholder="Entrer le titre du livre"
+              placeholder="Entrer votre recherche"
               onChange={searchTitle}
             />
           </div>
