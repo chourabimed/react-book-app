@@ -62,15 +62,21 @@ const Dashboard = () => {
       </div>
       <div className="container-lg mt-5">
         <div className="row justify-content-center">
-          {books.map((item) => {
-            return (
-              <BookItem
-                add={addToCart.bind(this, item)}
-                book={item}
-                key={item.isbn}
-              />
-            );
-          })}
+          {books.length > 0 ? (
+            books.map((item) => {
+              return (
+                <BookItem
+                  add={addToCart.bind(this, item)}
+                  book={item}
+                  key={item.isbn}
+                />
+              );
+            })
+          ) : (
+            <div>
+              <p>ooops... Pas de livres a afficher</p>
+            </div>
+          )}
         </div>
       </div>
     </>
